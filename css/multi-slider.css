@@ -11,7 +11,7 @@
     padding: 0;
     top: 40%;
     left: 10%;
-    height: 0px;
+    height: 0;
     width: 80%;
 }
 
@@ -27,7 +27,7 @@
 
 .multi-range > input[type=range]::-webkit-slider-runnable-track {
     -webkit-appearance: none;
-    height: 0px;
+    height: 0;
 }
 
 .multi-range > input[type=range]::-webkit-slider-thumb {

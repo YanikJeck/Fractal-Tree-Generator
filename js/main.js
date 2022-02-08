@@ -14,7 +14,7 @@ app.whenReady().then(() => {
             contextIsolation: false,
             nodeIntegration: true
         }});
-    window.loadFile('fractaltree.html');
+    window.loadFile('html/fractaltree.html');
 })
 
 ipcMain.on('closeWindow', () => {

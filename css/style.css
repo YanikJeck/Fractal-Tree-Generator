@@ -22,7 +22,6 @@ header {
     position: absolute;
     height: 24px;
     width: 100%;
-    -webkit-app-region: drag;
 }
 
 body {
@@ -57,7 +56,6 @@ Button:focus {
     border: none;
     height: 24px;
     width: 32px;
-    -webkit-app-region: no-drag;
     background-color: hsla(0,0%,0%,0);
 }
 
