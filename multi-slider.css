@@ -1,0 +1,94 @@
+.multi-range {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+}
+
+.multi-range > input[type=range] {
+    -webkit-appearance: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 40%;
+    left: 10%;
+    height: 0px;
+    width: 80%;
+}
+
+.multi-range > .track {
+    top: calc(40% + 3px);
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    background-color: var(--color-component-Slider);
+    height : 6px;
+    border-radius: 5px;
+}
+
+.multi-range > input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    height: 0px;
+}
+
+.multi-range > input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 12px;
+    border-radius: 25%;
+    background-color: var(--color-component-SliderThumb);
+}
+
+.multi-range > input[type=range]:hover::-webkit-slider-thumb {
+    background-color: var(--color-component-SliderThumb-on-hover);
+}
+
+.multi-range > .Label-Name-Slider {
+    position: absolute;
+    top: 7.5%;
+    left: 5%;
+    height: 27.5%;
+    width: 90%;
+    color: var(--color-font);
+    text-align: center;
+}
+
+.multi-range > .Label-Min-Value-Slider {
+    top: 75%;
+    position: absolute;
+    left: 5%;
+    width: 42.5%;
+    height: 25%;
+    text-align: center;
+    color: var(--color-font);
+}
+
+.multi-range > .Label-Max-Value-Slider {
+    top: 75%;
+    right: 5%;
+    position: absolute;
+    width: 42.5%;
+    height: 25%;
+    text-align: center;
+    color: var(--color-font);
+}
+
+#multi-range1 {
+    top: calc(33.75% + 2px);
+}
+
+#multi-range2 {
+    top: 45%;
+}
+
+#multi-range3 {
+    bottom: calc(33.75% + 2px);
+}
+
+#multi-range4 {
+    bottom: calc(22.5% + 4px);
+}
+
+#multi-range5 {
+    bottom: calc(11.25% + 6px);
+}
+

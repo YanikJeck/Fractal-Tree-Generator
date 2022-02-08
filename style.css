@@ -1,0 +1,280 @@
+:root {
+    --color-body-background: hsl(230, 13%, 9%);
+    --color-div-main-background: hsl(235, 15%, 14%);
+    --color-div-container-background: hsl(234, 23%, 10%);
+    --color-div-sub-container-background: hsl(240, 10%, 6%);
+    --color-component-Button: hsl(234, 25%, 17%);
+    --color-component-Button-on-hover: hsl(234, 25%, 22%);
+    --color-component-Checkbox: hsl(234, 25%, 17%);
+    --color-component-Label: hsl(234, 25%, 17%);
+    --color-component-Slider: hsl(234, 25%, 18%);
+    --color-component-Slider-on-hover: hsl(232, 25%, 23%);
+    --color-component-SliderThumb: hsl(240, 11%, 23%);
+    --color-component-SliderThumb-on-hover: hsl(240, 25%, 45%);
+    --color-component-Control-Button-on-hover: hsla(0, 0%, 100%,0.2);
+    --color-font: hsl(240, 100%, 95%);
+    --color-shadow: hsl(0, 0%, 0%);
+}
+
+header {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 24px;
+    width: 100%;
+    -webkit-app-region: drag;
+}
+
+body {
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: 400 13px Arial;
+    background-color: var(--color-body-background);
+}
+
+Button {
+    cursor: pointer;
+}
+
+Button:focus {
+   outline: none;
+}
+
+#mainDiv {
+    position: absolute;
+    top: 24px;
+    left: 48px;
+    width: calc(100% - 48px);
+    height: calc(100% - 24px);
+    border-top-left-radius: 24px;
+    background-color: var(--color-div-main-background);
+}
+
+.Control-Button {
+    position: absolute;
+    color: var(--color-font);
+    border: none;
+    height: 24px;
+    width: 32px;
+    -webkit-app-region: no-drag;
+    background-color: hsla(0,0%,0%,0);
+}
+
+.Control-Button:hover {
+    background-color: var(--color-component-Control-Button-on-hover);
+}
+
+.Control-Image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#exitOnClose {
+    right: 0;
+}
+
+#exitOnClose:hover {
+    background-color: hsl(0, 77%, 33%);
+}
+
+#maximize {
+    right: 32px;
+}
+
+#minimize {
+    right: 64px;
+}
+
+.Main-container {
+    position: absolute;
+    background-color: var(--color-div-container-background);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px var(--color-shadow);
+}
+
+.Sub-container {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    background-color: var(--color-div-sub-container-background);
+    top: 8px;
+    left: 8px;
+    border-radius: 1.5%;
+}
+
+.Slider-Container {
+    position: absolute;
+    width: 100%;
+    height: 10%;
+}
+
+.Label-Name-Slider {
+    position: absolute;
+    top: 7.5%;
+    left: 5%;
+    height: 27.5%;
+    width: 90%;
+    color: var(--color-font);
+    text-align: center;
+}
+
+.Label-Value-Slider {
+    position: absolute;
+    left: 5%;
+    top: 70%;
+    width: 42.5%;
+    height: 25%;
+    text-align: center;
+    color: var(--color-font);
+}
+
+.Slider {
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    height: 6px;
+    width: 80%;
+    border-radius: 5px;
+    background-color: var(--color-component-Slider);
+}
+
+.Slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 8px;
+    height: 12px;
+    border-radius: 25%;
+    background-color: var(--color-component-SliderThumb);
+}
+
+.Slider:hover::-webkit-slider-thumb {
+    background-color: var(--color-component-SliderThumb-on-hover);
+}
+
+.Generate-Button {
+    position: absolute;
+    top: 25%;
+    width: 15%;
+    height: 50%;
+    border: none;
+    color: var(--color-font);
+    background-color: var(--color-component-Button);
+    border-radius: 10%;
+    box-shadow: 0.15vw 0.35vw 0.2vw var(--color-shadow);
+}
+
+.Generate-Button:hover {
+    background-color: var(--color-component-Button-on-hover);
+}
+
+#canvasContainerMain {
+    top: 24px;
+    left: 36px;
+    width: calc(100% - 320px);
+    height: calc(100% - 186px);
+}
+
+#sliderContainerMain {
+    top: 24px;
+    right: 36px;
+    width: 200px;
+    height: calc(100% - 48px);
+}
+
+#buttonContainerMain {
+    position: absolute;
+    bottom: 24px;
+    left: 36px;
+    width: 900px;
+    height: 110px;
+}
+
+#controlContainerMain {
+    bottom: 24px;
+    right: 284px;
+    width: 180px;
+    height: 90px;
+}
+
+#canvas1 {
+    background-color: var(--color-div-sub-container-background);
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    height: calc(100% - 24px);
+    width: calc(100% - 24px);
+}
+
+#sliderContainer1 {
+    top: 8px;
+}
+
+#sliderContainer1 .Label-Value-Slider {
+    left: 7.5%;
+    top: 70%;
+    width: 85%;
+}
+
+#sliderContainer2 {
+    top: calc(11.25% + 6px);
+}
+
+#sliderContainer2 .Label-Value-Slider {
+    left: 7.5%;
+    top: 70%;
+    width: 85%;
+}
+
+#sliderContainer3 {
+    top: calc(22.5% + 4px);
+}
+
+#sliderContainer3 > #colorPreview {
+    top: 72%;
+    right: calc(26.25% - 6px);
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: hsl(0, 100%, 50%);
+    border-radius: 50%;
+}
+
+#sliderContainer4 {
+    bottom: 8px;
+}
+
+#sliderContainer4 .Label-Value-Slider {
+    left: 7.5%;
+    top: 70%;
+    width: 85%;
+}
+
+#icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+}
+
+#button1 {
+    left: 8%;
+}
+
+#button2 {
+    left: 31%;
+}
+
+#button3 {
+    right: 31%;
+}
+
+#button4 {
+    right: 8%;
+}
