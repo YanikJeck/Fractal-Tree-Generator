@@ -17,11 +17,13 @@
 }
 
 header {
-    top: 0;
+    top: 1px;
     left: 0;
     position: absolute;
-    height: 24px;
+    height: 23px;
     width: 100%;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
 }
 
 body {
@@ -30,6 +32,7 @@ body {
     background-attachment: fixed;
     font: 400 13px Arial;
     background-color: var(--color-body-background);
+    -webkit-app-region: no-drag;
 }
 
 Button {
@@ -51,12 +54,14 @@ Button:focus {
 }
 
 .Control-Button {
+    top: -1px;
     position: absolute;
     color: var(--color-font);
     border: none;
     height: 24px;
     width: 32px;
     background-color: hsla(0,0%,0%,0);
+    -webkit-app-region: no-drag;
 }
 
 .Control-Button:hover {
