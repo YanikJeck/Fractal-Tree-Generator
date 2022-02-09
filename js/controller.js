@@ -1,6 +1,5 @@
 const { ipcRenderer } = require('electron');
 const ipc = ipcRenderer;
-const previewBox = document.getElementById('previewBox1');
 
 function closeWindow() {
     ipc.send('closeWindow');
