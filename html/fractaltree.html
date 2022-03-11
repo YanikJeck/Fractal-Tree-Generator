@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="../css/multi-slider.css">
     </head>
     <body onresize="resize()">
-        <header>
+        <header id="header">
             <button class="Control-Button" id="exitOnClose" onclick="closeWindow()">
                 <img  class="Control-Image" src="../images/close.png" alt="close">
             </button>
@@ -128,7 +128,7 @@
                     <button type="submit" id="button1" class="Generate-Button" onclick="drawTree()">Draw Tree</button>
                     <button type="submit" id="button2" class="Generate-Button" onclick="download()">Download</button>
                     <button type="submit" id="button3" class="Generate-Button" onclick="randomizeValues()">Randomize</button>
-                    <button type="submit" id="button4" class="Generate-Button" onclick="active = false">Stop</button>
+                    <button type="submit" id="button4" class="Generate-Button" onclick="allowDrawing = false; ctx.putImageData(canvasSave,0,0);">Stop</button>
                 </div>
             </div>
         </div>
