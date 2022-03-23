@@ -56,11 +56,11 @@ downloadBtn.onclick = function () {
 randBtn.onclick = function () {
     for (let i = 0; i < sliders.length; i++) {
         sliders[i].value = Math.random()*(sliders[i].max-Number(sliders[i].min))+Number(sliders[i].min);
-        sliders[i].labels[0].innerHTML = sliders[i].value;
+        sliders[i].labels[0].textContent = sliders[i].value;
     }
     for (let i = 0; i < multiSliders.length; i++) {
         multiSliders[i].value = Math.random()*(multiSliders[i].max-Number(multiSliders[i].min))+Number(multiSliders[i].min);
-        multiSliders[i].labels[0].innerHTML = multiSliders[i].value;
+        multiSliders[i].labels[0].textContent = multiSliders[i].value;
     }
     setPreviewColor(sliders[2]);
 }
@@ -91,7 +91,7 @@ function resize() {
  */
 function updateLabelData(data) {
     let label = data.labels[0];
-    label.innerHTML = data.value;
+    label.textContent = data.value;
 }
 
 /**
