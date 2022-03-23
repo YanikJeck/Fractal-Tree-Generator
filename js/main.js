@@ -18,7 +18,7 @@ app.whenReady().then(() => {
             nodeIntegration: true
         }});
     window.loadFile('./html/fractaltree.html');
-    window.webContents.openDevTools();
+    //window.webContents.openDevTools();
     window.on('resize',() => window.webContents.send('resize'));
 })
 

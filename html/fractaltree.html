@@ -3,19 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1">
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
         <title>Fractal Tree</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/multi-slider.css">
     </head>
-    <body onresize="resize()">
+    <body>
         <header id="header">
-            <button class="Control-Button" id="exitOnClose" onclick="closeWindow()">
+            <button class="Control-Button" id="exitOnClose">
                 <img  class="Control-Image" src="../images/close.png" alt="close">
             </button>
-            <button class="Control-Button" id="maximize" onclick="maximizeWindow()">
+            <button class="Control-Button" id="maximize">
                 <img  class="Control-Image" src="../images/maximize.png" alt="maximize">
             </button>
-            <button class="Control-Button" id="minimize" onclick="minimizeWindow()">
+            <button class="Control-Button" id="minimize">
                 <img  class="Control-Image" src="../images/minimize.png" alt="minimize">
             </button>
         </header>
@@ -35,7 +36,7 @@
                             200
                         </label>
 
-                        <input type="range" min="100" max="300" value="200" step="5" id="slider1" class="Slider" oninput="updateLabelData(this)">
+                        <input type="range" min="100" max="300" value="200" step="5" id="slider1" class="Slider">
                     </div>
 
                     <div id="sliderContainer2" class="Slider-Container">
@@ -47,7 +48,7 @@
                             10
                         </label>
 
-                        <input type="range" min="5" max="15" value="10" step="1" id="slider2" class="Slider" oninput="updateLabelData(this)">
+                        <input type="range" min="5" max="15" value="10" step="1" id="slider2" class="Slider">
                     </div>
 
                     <div id="sliderContainer3" class="Slider-Container">
@@ -61,7 +62,7 @@
 
                         <div id="colorPreview"></div>
 
-                        <input type="range" min="0" max="360" value="0" step="1" id="slider3" class="Slider" oninput="updateLabelData(this); setPreviewColor(this)">
+                        <input type="range" min="0" max="360" value="0" step="1" id="slider3" class="Slider">
                     </div>
 
                     <div class='multi-range' id="multi-range1">
@@ -69,8 +70,8 @@
                         <label for="multislider1" class="Label-Min-Value-Slider">1.01</label>
                         <label for="multislider2" class="Label-Max-Value-Slider">2</label>
                         <div class="track"></div>
-                        <input type='range' class="MultiSlider" id="multislider1" min="1.01" max="2.0"  value="1.01" step="0.01" oninput="updateLabelData(this)">
-                        <input type='range' class="MultiSlider" id="multislider2" min="1.01" max="2.0"  value="2" step="0.01" oninput="updateLabelData(this)">
+                        <input type='range' class="MultiSlider" id="multislider1" min="1.01" max="2.0"  value="1.01" step="0.01">
+                        <input type='range' class="MultiSlider" id="multislider2" min="1.01" max="2.0"  value="2" step="0.01">
                     </div>
 
                     <div class='multi-range' id="multi-range2">
@@ -78,8 +79,8 @@
                         <label for="multislider3" class="Label-Min-Value-Slider">1.01</label>
                         <label for="multislider4" class="Label-Max-Value-Slider">2</label>
                         <div class="track"></div>
-                        <input type='range' class="MultiSlider" id="multislider3" min="1.01" max="2.0"  value="1.01" step="0.01" oninput="updateLabelData(this)">
-                        <input type='range' class="MultiSlider" id="multislider4" min="1.01" max="2.0"  value="2" step="0.01" oninput="updateLabelData(this)">
+                        <input type='range' class="MultiSlider" id="multislider3" min="1.01" max="2.0"  value="1.01" step="0.01">
+                        <input type='range' class="MultiSlider" id="multislider4" min="1.01" max="2.0"  value="2" step="0.01">
                     </div>
 
                     <div class='multi-range' id="multi-range3">
@@ -87,8 +88,8 @@
                         <label for="multislider5" class="Label-Min-Value-Slider">0</label>
                         <label for="multislider6" class="Label-Max-Value-Slider">180</label>
                         <div class="track"></div>
-                        <input type='range' class="MultiSlider" id="multislider5" min="-180" max="180"  value="0" step="1" oninput="updateLabelData(this)">
-                        <input type='range' class="MultiSlider" id="multislider6" min="-180" max="180"  value="180" step="1" oninput="updateLabelData(this)">
+                        <input type='range' class="MultiSlider" id="multislider5" min="-180" max="180"  value="0" step="1">
+                        <input type='range' class="MultiSlider" id="multislider6" min="-180" max="180"  value="180" step="1">
                     </div>
 
                     <div class='multi-range' id="multi-range4">
@@ -96,8 +97,8 @@
                         <label for="multislider7" class="Label-Min-Value-Slider">2</label>
                         <label for="multislider8" class="Label-Max-Value-Slider">16</label>
                         <div class="track"></div>
-                        <input type='range' class="MultiSlider" id="multislider7" min="2" max="16"  value="2" step="0.25" oninput="updateLabelData(this)">
-                        <input type='range' class="MultiSlider" id="multislider8" min="2" max="16"  value="16" step="0.25" oninput="updateLabelData(this)">
+                        <input type='range' class="MultiSlider" id="multislider7" min="2" max="16"  value="2" step="0.25">
+                        <input type='range' class="MultiSlider" id="multislider8" min="2" max="16"  value="16" step="0.25">
                     </div>
 
                     <div class='multi-range' id="multi-range5">
@@ -105,8 +106,8 @@
                         <label for="multislider9" class="Label-Min-Value-Slider">1</label>
                         <label for="multislider10" class="Label-Max-Value-Slider">3</label>
                         <div class="track"></div>
-                        <input type='range' class="MultiSlider" id="multislider9" min="1" max="3"  value="1" step="1" oninput="updateLabelData(this)">
-                        <input type='range' class="MultiSlider" id="multislider10" min="1" max="3"  value="3" step="1" oninput="updateLabelData(this)">
+                        <input type='range' class="MultiSlider" id="multislider9" min="1" max="3"  value="1" step="1">
+                        <input type='range' class="MultiSlider" id="multislider10" min="1" max="3"  value="3" step="1">
                     </div>
 
                     <div id="sliderContainer4" class="Slider-Container">
@@ -118,17 +119,17 @@
                             10
                         </label>
 
-                        <input type="range" min="0" max="15" value="10" id="slider4" class="Slider" oninput="updateLabelData(this)">
+                        <input type="range" min="0" max="15" value="10" id="slider4" class="Slider">
                     </div>
                 </div>
             </div>
 
             <div id="buttonContainerMain" class="Main-container">
                 <div class="Sub-container">
-                    <button type="submit" id="button1" class="Generate-Button" onclick="drawTree()">Draw Tree</button>
-                    <button type="submit" id="button2" class="Generate-Button" onclick="download()">Download</button>
-                    <button type="submit" id="button3" class="Generate-Button" onclick="randomizeValues()">Randomize</button>
-                    <button type="submit" id="button4" class="Generate-Button" onclick="allowDrawing = false;">Stop</button>
+                    <button type="submit" id="button1" class="Generate-Button">Draw Tree</button>
+                    <button type="submit" id="button2" class="Generate-Button">Download</button>
+                    <button type="submit" id="button3" class="Generate-Button">Randomize</button>
+                    <button type="submit" id="button4" class="Generate-Button">Stop</button>
                 </div>
             </div>
         </div>
